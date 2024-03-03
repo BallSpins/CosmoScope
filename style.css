@@ -27,7 +27,6 @@ body {
     padding-top: 4em;
 }
 
-
 .container-fluid {
     box-shadow: 7em 7em 8em black;
 }
@@ -95,7 +94,7 @@ body {
         display: none;
     }
     .mobile-nav {
-        margin-bottom: 100px;
+        margin-bottom: 2em;
         visibility: visible;
         display: flex;
     }
@@ -130,6 +129,7 @@ body {
 @media (max-width:320px) {
     .mobile-main {
         font-size: 1em;
+        width: 70em;
     }
     .mobile-nav {
         visibility: visible;
