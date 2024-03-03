@@ -1,0 +1,120 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background-image: url("assets/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.button-custom {
+    width: 5px;
+}
+
+.container-fluid {
+    box-shadow: 7em 7em 8em black;
+}
+
+/* Ekstra large */
+@media (max-width:2560px){
+    .mobile-nav {
+        visibility: hidden;
+    }
+}
+
+/* laptop */
+@media (max-width:992px){
+    html{
+        font-size: 60%;
+    }
+    .mobile-nav {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 1024px) {
+    #img svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    html {
+        font-size: 55%;
+    }
+
+    .contents {
+        font-size: 200%;
+    }
+    .mobile-nav {
+        visibility: hidden;
+    }
+}
+
+
+/* tablet */
+@media (max-width:800px){
+    .mobile-nav {
+        visibility: hidden;
+    }
+    .navbar .nav-link{
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+}
+
+@media (max-width:768px){
+    .contents svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    #name {
+        padding-top: 8px;
+    }
+
+    html {
+        font-size: 40%;
+    }
+    .mobile-nav {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-nav {
+        margin-bottom: 100px;
+        visibility: visible;
+    }
+    .mobile-main {
+        width: 90em;
+        justify-content: center;
+        margin: auto;
+    }
+}
+    
+    
+/* mobile phone */
+@media (max-width:576px){
+    .mobile-main {
+        width: 60em;
+    }
+    .mobile-nav {
+        visibility: visible;
+    }
+    #name-mp p {
+        margin-bottom: 1em;
+        font-size: small;
+    }
+    html{
+        min-height: 0px;
+    }
+}
+
+@media (max-width:320px) {
+    .mobile-nav {
+        visibility: visible;
+    }
+}
