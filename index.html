@@ -10,9 +10,9 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row flex-shrink-0">
+        <div class="row" style="overflow: visible;">
             <!-- side bar -->
-            <nav class="navbar navbar-dark bg-dark flex-column col-md-2 d-none d-md-block rounded m-2 mt-md-4 h-75 sticky-top">
+            <nav class="navbar navbar-dark bg-dark flex-column col-md-2 d-none d-md-block rounded m-2 mt-md-4 h-75 position-sticky sticky-top navbar-high">
               
               <!-- Logo -->
               <div class="d-flex flex-column ms-4 mt-1">
@@ -93,9 +93,9 @@
                 <!-- Repeat dropdown for Galaxies, Space Objects, and Support -->
               </div>
             </nav>
-
+            
             <!-- phone navbar -->
-            <nav class="navbar navbar-dark bg-dark navbar-expand-lg rounded position-absolute sticky-top mobile-nav" style="flex-wrap: wrap;">
+            <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top mobile-nav" id="mobile-nav">
               
               <!-- Logo -->
               <div class="d-flex ms-4 mt-1 nav-item">
@@ -109,13 +109,14 @@
 
               <!-- Home -->
               <a class="nav-item nav-link" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 1024 1024"><path fill="white" d="M512 128L128 447.936V896h255.936V640H640v256h255.936V447.936z"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 1024 1024 "><path fill="white" d="M512 128L128 447.936V896h255.936V640H640v256h255.936V447.936z"/>
                 </svg>
               </a>
 
             </nav>
+            
 
-            <main role="main" class="col-md-9 m-sm-auto col-lg-9 px-4 bg-dark mt-md-4 mobile-main">
+            <main role="main" class="col-md-9 m-sm-auto col-lg-9 px-4 bg-dark mt-sm-4 mobile-main">
                 <div class="container-fluid">
                   <p class="text-white m-2">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nec feugiat nisl pretium fusce id velit ut tortor. Adipiscing elit duis tristique sollicitudin nibh sit. Enim ut tellus elementum sagittis vitae et. Hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Massa tincidunt nunc pulvinar sapien. Dui id ornare arcu odio ut. Tincidunt id aliquet risus feugiat in ante metus dictum. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae proin. Neque egestas congue quisque egestas diam in. Tortor id aliquet lectus proin nibh nisl condimentum. Eget dolor morbi non arcu risus quis varius quam quisque. Erat pellentesque adipiscing commodo elit at imperdiet dui. Non arcu risus quis varius. Ipsum consequat nisl vel pretium lectus quam id. Hac habitasse platea dictumst vestibulum rhoncus est. Feugiat in fermentum posuere urna nec tincidunt praesent semper feugiat. Ullamcorper eget nulla facilisi etiam dignissim diam quis. Diam phasellus vestibulum lorem sed.
@@ -322,5 +323,6 @@ Netus et malesuada fames ac turpis egestas integer. Diam ut venenatis tellus in.
             </main>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>

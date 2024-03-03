@@ -1,7 +1,3 @@
-html {
-    overflow-x: hidden;
-}
-
 body {
     background-image: url("assets/background.jpg");
     background-repeat: no-repeat;
@@ -9,9 +5,28 @@ body {
     background-size: cover;
 }
 
+.navbar-high {
+    display: flex;
+}
+
+.mobile-nav {
+    display: none;
+}
+
 .button-custom {
     width: 5px;
 }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + main {
+    padding-top: 4em;
+}
+
 
 .container-fluid {
     box-shadow: 7em 7em 8em black;
@@ -19,9 +34,7 @@ body {
 
 /* Ekstra large */
 @media (max-width:2560px){
-    .mobile-nav {
-        visibility: hidden;
-    }
+    
 }
 
 /* laptop */
@@ -65,38 +78,39 @@ body {
     
 }
 
-@media (max-width:768px){
+@media (max-width: 768px) {
     .contents svg {
         width: 15px;
         height: 15px;
     }
-
+    
     #name {
         padding-top: 8px;
     }
-
+    
     html {
         font-size: 40%;
     }
-    .mobile-nav {
-        visibility: hidden;
+    .navbar-high {
+        display: none;
     }
-}
-
-@media (max-width: 768px) {
     .mobile-nav {
         margin-bottom: 100px;
         visibility: visible;
+        display: flex;
     }
     .mobile-main {
         width: 90em;
         justify-content: center;
         margin: auto;
     }
+    .navbar-high {
+        visibility: hidden;
+    }
 }
     
     
-/* mobile phone */
+
 @media (max-width:576px){
     .mobile-main {
         width: 60em;
@@ -114,6 +128,9 @@ body {
 }
 
 @media (max-width:320px) {
+    .mobile-main {
+        font-size: 1em;
+    }
     .mobile-nav {
         visibility: visible;
     }
