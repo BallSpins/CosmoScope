@@ -10,9 +10,20 @@ body {
     display: flex;
 }
 
+.home-mp {
+    margin-left: 5em;
+}
+
+.hamburg-content {
+    box-shadow: 2em 2em 3em black;
+    z-index: 2;
+    display: none;
+}
+
 .mobile-nav {
     box-shadow: 2em 2em 3em black;
     display: none;
+    z-index: 1;
 }
 
 .button-custom {
@@ -35,7 +46,9 @@ body {
 
 /* Ekstra large */
 @media (max-width:2560px){
-    
+    .hamburg-content {
+        visibility: initial;
+    }
 }
 
 /* laptop */
@@ -92,11 +105,15 @@ body {
     #name-mp p {
         margin-bottom: 2em;
     }
-    html {
-        font-size: 60%;
-    }
     .navbar-high {
+        visibility: hidden;
         display: none;
+    }
+    .home-mp {
+        margin-left: 38em;
+    }
+    .hamburg-content {
+        visibility: visible;
     }
     .mobile-nav {
         margin-bottom: 2em;
@@ -104,12 +121,10 @@ body {
         display: flex;
     }
     .mobile-main {
+        font-size: 130%;
         width: 70em;
         justify-content: center;
         margin: auto;
-    }
-    .navbar-high {
-        visibility: hidden;
     }
 }
 
@@ -118,21 +133,31 @@ body {
         width: 60em;
     }
 }
-    
-    
+
+@media (max-width:592px) {
+    .home-mp {
+        margin-left: 25em;
+    }
+}
+
+@media (max-width:585px) {
+    .home-mp {
+        margin-left: 25em;
+    }
+}    
 
 @media (max-width:576px){
     html {
         font-size: 70%;
     }
-    .mobile-main {
+    .home-mp {
+        margin-left: 15em;
+    }
+.mobile-main {
         width: 40em;
     }
     .mobile-nav {
         visibility: visible;
-    }
-    #name {
-        margin-bottom: 2em;
     }
     #name-mp p {
         margin-bottom: 1em;
@@ -143,7 +168,11 @@ body {
     }
 }
 
-@media (max-width:426px) {
+
+@media (max-width:470px) {
+    .home-mp {
+        margin-left: 8em;
+    }
     .mobile-main {
         width: 30em;
     }
