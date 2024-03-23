@@ -10,10 +10,6 @@ body {
     display: flex;
 }
 
-.home-mp {
-    margin-left: 5em;
-}
-
 .hamburg-content {
     box-shadow: 2em 2em 3em black;
     z-index: 2;
@@ -53,9 +49,6 @@ body {
 
 /* laptop */
 @media (max-width:992px){
-    html{
-        font-size: 60%;
-    }
     .mobile-nav {
         visibility: hidden;
     }
@@ -68,7 +61,7 @@ body {
     }
 
     html {
-        font-size: 55%;
+        font-size: 70%;
     }
 
     .contents {
@@ -109,9 +102,6 @@ body {
         visibility: hidden;
         display: none;
     }
-    .home-mp {
-        margin-left: 38em;
-    }
     .hamburg-content {
         visibility: visible;
     }
@@ -134,24 +124,9 @@ body {
     }
 }
 
-@media (max-width:592px) {
-    .home-mp {
-        margin-left: 25em;
-    }
-}
-
-@media (max-width:585px) {
-    .home-mp {
-        margin-left: 25em;
-    }
-}    
-
 @media (max-width:576px){
     html {
         font-size: 70%;
-    }
-    .home-mp {
-        margin-left: 15em;
     }
 .mobile-main {
         width: 40em;
@@ -170,9 +145,6 @@ body {
 
 
 @media (max-width:470px) {
-    .home-mp {
-        margin-left: 8em;
-    }
     .mobile-main {
         width: 30em;
     }

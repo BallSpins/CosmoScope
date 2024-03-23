@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/4.3.0/vue-router.global.min.js"></script> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -99,7 +101,7 @@
             <nav class="navbar navbar-dark bg-dark navbar-expand sticky-top mobile-nav" id="mobile-nav">
               
               <!-- Logo -->
-              <div class="d-flex ms-4 mt-1 nav-item me-5">
+              <div class="d-flex ms-4 mt-1 nav-item me-5" style="left: 0;">
                 <div id="img-mp">
                   <img class="flex-shrink-0" src="assets/Logo.svg" alt="logo" style="width: 30px; height: 30px;">
                 </div>
@@ -108,26 +110,99 @@
                 </div>
               </div>
 
-              <!-- Home -->
-              <a class="nav-item nav-link home-mp" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 1024 1024 "><path fill="white" d="M512 128L128 447.936V896h255.936V640H640v256h255.936V447.936z"/>
-                </svg>
-              </a>
+              <!-- Button -->
+              <div class="nav-item position-absolute d-flex" style="right: 0;">
+                <!-- Login -->
+                <button class="nav-item btn btn-dark btn-outline-info w-100 ms-3">Login</button>
 
-              <!-- Search -->
-              <a class="nav-item nav-link" href="#">
-                <svg class="m-1" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 16 16"><g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="m11.25 11.25l3 3"/><circle cx="7.5" cy="7.5" r="4.75"/></g>
-                </svg>
-              </a>
-
-              <!-- Login -->
-              <button class="nav-item btn btn-dark btn-outline-info btn-custom w-25 ms-3">Login</button>
-
-              <!-- Hamburger Menu -->
-              <a class="nav-item nav-link ms-2 justify-content-end" role="button" onclick="hamburger()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 17h18M3 12h18M3 7h18"/>
-                </svg>
-              </a>
+                <a class="nav-item nav-link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 1024 1024 "><path fill="white" d="M512 128L128 447.936V896h255.936V640H640v256h255.936V447.936z"/>
+                  </svg>
+                </a>
+  
+                <!-- Hamburger Menu -->
+                <a href="#" class="btn bg-dark" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 17h18M3 12h18M3 7h18"/>
+                  </svg>
+                </a>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                  <div class="offcanvas-header bg-dark text-white">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">CosmoScope</h5>
+                    <a href="#" class="btn text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 17h18M3 12h18M3 7h18"/>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="offcanvas-body bg-dark">
+                    <div class="navbar-nav m-4 py-0 contents flex-column">
+                      <!-- Home -->
+                      <div class="d-flex align-items-center">
+                        <svg class="m-1" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 1024 1024"><path fill="white" d="M512 128L128 447.936V896h255.936V640H640v256h255.936V447.936z"/>
+                        </svg>
+                        <a class="nav-item nav-link" href="#">Home</a>
+                      </div>
+      
+                      <!-- Search -->
+                      <div class="d-flex align-items-center">
+                        <svg class="m-1" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 16 16"><g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="m11.25 11.25l3 3"/><circle cx="7.5" cy="7.5" r="4.75"/></g>
+                        </svg>
+                        <a class="nav-item nav-link" href="#">Search</a>
+                      </div>
+      
+                      <!-- Gallery -->
+                      <div class="d-flex align-items-center">
+                        <svg class="m-1" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 1024 1024"><path fill="white" d="M96 896a32 32 0 0 1-32-32V160a32 32 0 0 1 32-32h832a32 32 0 0 1 32 32v704a32 32 0 0 1-32 32zm315.52-228.48l-68.928-68.928a32 32 0 0 0-45.248 0L128 768.064h778.688l-242.112-290.56a32 32 0 0 0-49.216 0L458.752 665.408a32 32 0 0 1-47.232 2.112M256 384a96 96 0 1 0 192.064-.064A96 96 0 0 0 256 384"/>
+                        </svg>
+                        <a class="nav-item nav-link" href="#">Gallery</a>
+                      </div>
+      
+                      <!-- Login -->
+                      <button class="nav-item btn btn-dark btn-outline-info mt-3 btn-custom">Login</button>
+      
+                      <!-- Planets -->
+                      <div class="nav-item btn-group dropright mt-3">
+                        <div class="d-flex align-items-center">
+                          <svg class="m-1" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="white" d="M17.9 17.39c-.26-.8-1.01-1.39-1.9-1.39h-1v-3a1 1 0 0 0-1-1H8v-2h2a1 1 0 0 0 1-1V7h2a2 2 0 0 0 2-2v-.41a7.984 7.984 0 0 1 2.9 12.8M11 19.93c-3.95-.49-7-3.85-7-7.93c0-.62.08-1.22.21-1.79L9 15v1a2 2 0 0 0 2 2m1-16A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2"/>
+                          </svg>                       
+                          <a href="#" class="nav-link dropdown-toggle me-md-5" role="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Planets</a>
+                          <div class="dropdown-menu dropdown-menu-dark text-white ms-5" aria-labelledby="navbarDropdown">
+                            <!-- Add dropdown items here -->
+                            <a href="#" class="dropdown-item">Earth</a>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Galaxies -->
+                      <div class="nav-item btn-group dropright mt-3">
+                        <div class="d-flex align-items-center">
+                          <svg class="m-1" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 14 14"><path fill="white" fill-rule="evenodd" d="M7.558.198a.75.75 0 1 0-.75 1.3c1.249.72 1.888 1.977 1.917 3.346c-1.714-2.18-4.668-3.269-7.337-1.728a.75.75 0 0 0 .75 1.3c1.251-.723 2.661-.647 3.863.015C3.26 4.83.83 6.84.83 9.918a.75.75 0 1 0 1.5 0c0-1.434.769-2.613 1.939-3.324c-1.016 2.57-.489 5.672 2.172 7.208a.75.75 0 1 0 .75-1.3c-1.242-.716-1.878-1.972-1.909-3.34C7 11.326 9.95 12.42 12.611 10.884a.75.75 0 0 0-.75-1.3c-1.24.717-2.644.641-3.844-.014c2.74-.399 5.151-2.412 5.151-5.488a.75.75 0 0 0-1.5 0c0 1.442-.768 2.624-1.94 3.334c1.032-2.575.497-5.677-2.171-7.218ZM7 8.001A1.001 1.001 0 1 0 7 6a1.001 1.001 0 0 0 0 2Z" clip-rule="evenodd"/>
+                          </svg>                    
+                          <a href="#" class="nav-link dropdown-toggle" role="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Galaxies</a>
+                          <div class="dropdown-menu dropdown-menu-dark text-white" aria-labelledby="navbarDropdown">
+                            <!-- Add dropdown items here -->
+                            <a href="#" class="dropdown-item">Milky Way</a>
+                          </div>
+                        </div>
+                      </div>
+      
+                      <!-- Space Object -->
+                      <div class="nav-item btn-group dropright mt-3">
+                        <div class="d-flex align-items-center">
+                          <svg class="m-1" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m9.879 5.636l.707-.707a6 6 0 0 1 8.485 8.485l-2.121 2.122M7.757 7.757L5.636 9.88M3.515 12l-.707.707m12.02 4.95l-1.414 1.414m-.707-4.95l-.707.707M9.879 16.95l-2.122 2.12m2.122-7.778l-6.364 6.364"/><circle cx="14.828" cy="9.172" r="2" fill="white" transform="rotate(45 14.828 9.172)"/></g>
+                          </svg>                   
+                          <a href="#" class="nav-link dropdown-toggle" role="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Space Object</a>
+                          <div class="dropdown-menu dropdown-menu-dark text-white" aria-labelledby="navbarDropdown">
+                            <!-- Add dropdown items here -->
+                            <a href="#" class="dropdown-item">Milky Way</a>
+                          </div>
+                        </div>
+                      </div>
+      
+                      <!-- Repeat dropdown for Galaxies, Space Objects, and Support -->
+                    </div>
+                  </div>
+               </div>
+              </div>
             </nav>
 
             <main role="main" class="col-md-9 m-sm-auto col-lg-9 px-4 bg-dark mt-sm-4 mobile-main">
@@ -338,5 +413,19 @@ Netus et malesuada fames ac turpis egestas integer. Diam ut venenatis tellus in.
         </div>
     </div>
     <script src="main.js"></script>
+    <script>
+      const routes = [
+        { path: '/', component: Home },
+        { path: '/login', component: login }
+      ]
+
+      const router = new VueRouter({
+        routes
+      })
+
+      const app = new Vue({
+        router
+      }).$mount('#app')
+    </script>
 </body>
 </html>
