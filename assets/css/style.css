@@ -1,0 +1,154 @@
+body {
+    background-image: url("../background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.navbar-high {
+    box-shadow: 2em 2em 3em black;
+    display: flex;
+}
+
+.hamburg-content {
+    box-shadow: 2em 2em 3em black;
+    z-index: 2;
+    display: none;
+}
+
+.mobile-nav {
+    box-shadow: 2em 2em 3em black;
+    display: none;
+    z-index: 1;
+}
+
+.button-custom {
+    width: 5px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + main {
+    margin-top: 6em;
+}
+
+.container-fluid {
+    box-shadow: 7em 7em 8em black;
+}
+
+/* Ekstra large */
+@media (max-width:2560px){
+    .hamburg-content {
+        visibility: initial;
+    }
+}
+
+/* laptop */
+@media (max-width:992px){
+    .mobile-nav {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 1024px) {
+    #img svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    html {
+        font-size: 70%;
+    }
+
+    .contents {
+        font-size: 130%;
+    }
+    .mobile-nav {
+        visibility: hidden;
+    }
+}
+
+@media (max-width:900px){
+    .contents {
+        font-size: 100%;
+    }
+    
+}
+
+/* tablet */
+@media (max-width:800px){
+    .mobile-nav {
+        visibility: hidden;
+    }
+    .navbar .nav-link{
+        text-align: center;
+    }
+    
+}
+
+@media (max-width: 769px) {
+    .contents svg {
+        width: 15px;
+        height: 15px;
+    }
+    #name-mp p {
+        margin-bottom: 2em;
+    }
+    .navbar-high {
+        visibility: hidden;
+        display: none;
+    }
+    .hamburg-content {
+        visibility: visible;
+    }
+    .mobile-nav {
+        margin-bottom: 2em;
+        visibility: visible;
+        display: flex;
+    }
+    .mobile-main {
+        font-size: 130%;
+        width: 70em;
+        justify-content: center;
+        margin: auto;
+    }
+}
+
+@media (max-width:672px) {
+    .mobile-main {
+        width: 60em;
+    }
+}
+
+@media (max-width:576px){
+    html {
+        font-size: 70%;
+    }
+.mobile-main {
+        width: 40em;
+    }
+    .mobile-nav {
+        visibility: visible;
+    }
+    #name-mp p {
+        margin-bottom: 1em;
+        font-size: small;
+    }
+    html{
+        min-height: 0px;
+    }
+}
+
+
+@media (max-width:470px) {
+    .mobile-main {
+        width: 30em;
+    }
+    .mobile-nav {
+        visibility: visible;
+    }
+}
