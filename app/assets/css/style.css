@@ -1,8 +1,9 @@
 body {
-    background-image: url("../background.jpg");
+    background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    overflow-x: hidden;
 }
 
 .navbar-high {
@@ -42,8 +43,11 @@ body {
 
 /* Ekstra large */
 @media (max-width:2560px){
-    .hamburg-content {
-        visibility: initial;
+    .navbar-high {
+        font-size: 80%;
+    }
+    .logo #name p {
+        font-size: 80%;
     }
 }
 
@@ -112,7 +116,7 @@ body {
     }
     .mobile-main {
         font-size: 130%;
-        width: 70em;
+        width: 60em;
         justify-content: center;
         margin: auto;
     }
