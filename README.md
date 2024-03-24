@@ -1,3 +1,3 @@
-##COSMOSCOPE
+## COSMOSCOPE
 
 Long-term project.
